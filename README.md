@@ -3,7 +3,7 @@
 ## Welcome! 👋
 
 - Solution URL: https://github.com/asmaa-elfatayry/Healthtoo-Project
-- Live Site URL: https://asmaa-elfatayry.github.io/Healthtoo-Project/
+- Live Site URL: https://asmaa-elfatayry.github.io/Healthtoo-Project/index.html
 
 ### Built with
 
