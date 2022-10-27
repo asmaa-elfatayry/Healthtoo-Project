@@ -1,0 +1,113 @@
+$logo_green_color: #6bc37c;
+$intro_pargraph: #7f8da0;
+$intro_btn: #4dbc4b;
+$intro_bt_right: #1d8a1b;
+$bg_container_plates: #d4f6da;
+$plate_bg: #f2f6ff;
+$white: #fff;
+$plate_shadow: rgba(0, 0, 0, 0.75);
+$calories_color: rgb(218, 29, 29);
+$plate_span_color: #bebcba;
+$plate_icon_bg: #222;
+$heading_girl_sec: #1d8a1b;
+$heading_color: #23233c;
+::selection {
+    background-color: $logo_green_color;
+    color: $heading_color;
+}
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans";
+}
+
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+@mixin Style_heading {
+    color: $heading_color;
+    font-weight: bold;
+    font-size: 40px;
+    span {
+        border-bottom: 4px solid $intro_bt_right;
+        width: fit-content;
+        padding-bottom: 5px;
+        border-radius: 25px 25px 0px 0px;
+        margin-left: 5px;
+    }
+    margin: 80px 20px;
+    text-transform: capitalize;
+}
+
+@mixin style_plate {
+    background-color: $plate_bg;
+    border-radius: 150px 150px 25px 25px;
+    width: 250px;
+    height: 300px;
+    position: relative;
+    padding: 130px 20px 10px;
+
+    h3 {
+        color: $heading_color;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+    }
+    .calori-grams {
+        padding: 10px 0;
+        gap: 25px;
+        p {
+            color: $heading_color;
+            font-size: 11px;
+        }
+
+        .calo {
+            h4 {
+                color: $calories_color;
+                font-weight: bold;
+            }
+        }
+        .gram {
+            h4 {
+                font-weight: bold;
+            }
+        }
+    }
+    .plate-img {
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        margin: auto;
+        top: -100px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: -20px;
+        right: -20px;
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        background-color: $plate_icon_bg;
+        cursor: pointer;
+        i {
+            color: $white;
+            font-weight: lighter;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+
+        text-align: center;
+    }
+}

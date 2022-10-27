@@ -1,0 +1,268 @@
+@import "config";
+
+/* form */
+.layout {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #202c20e0;
+    z-index: 2;
+    display: none;
+}
+form {
+    width: 35%;
+    display: none;
+    margin: 100px auto;
+    border: 2px solid rgba(39, 38, 38, 0.219);
+    padding: 70px 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    background-color: rgb(233, 225, 225);
+    border-radius: 20px;
+    z-index: 3;
+}
+form h2 {
+    color: #1d8a1b;
+    margin-bottom: 40px;
+}
+form i {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    color: #416e41c0;
+}
+form button {
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header {
+    background-image: url("../images/background.jpg");
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+nav {
+    background-color: $white;
+    img {
+        width: 40px;
+        height: 38px;
+        padding-right: 7px;
+    }
+    .container {
+        height: 80px;
+
+        h1 {
+            color: $heading_color;
+            font-weight: bold;
+            span {
+                color: $logo_green_color;
+            }
+        }
+        ul {
+            padding-top: 10px;
+        }
+
+        li {
+            list-style: none;
+        }
+        .tips {
+            color: $logo_green_color;
+        }
+        a {
+            text-decoration: none;
+            color: $heading_color;
+            font-weight: bold;
+            font-size: 22px;
+        }
+    }
+} // end nav
+// start text intro
+.text-intro {
+    padding: 150px 50px 0px 100px;
+    line-height: 1.6;
+    gap: 20px;
+    width: 50%;
+
+    q {
+        color: $heading_color;
+        font-weight: bold;
+        font-size: 38px;
+    }
+    p {
+        color: $intro_pargraph;
+        font-size: 26px;
+    }
+    button {
+        margin-top: 30px;
+        padding: 15px 80px 15px 20px;
+        border-radius: 0px 25px 25px 0px;
+        border: none;
+        width: 180px;
+        outline: none;
+        font-weight: bold;
+        background-color: $intro_btn;
+        color: $white;
+        position: relative;
+        transition: 0.4s;
+    }
+    button:hover {
+        background-color: $intro_bt_right;
+    }
+    button:hover span {
+        background-color: $intro_btn;
+    }
+    button span {
+        background-color: $intro_bt_right;
+        padding: 15px 25px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 0px 25px 25px 0px;
+    }
+} //end text intro
+
+// start category
+main h2 {
+    @include Style_heading;
+
+    img {
+        width: 30px;
+        height: 33px;
+    }
+}
+.category {
+    .our-sections {
+        margin: 40px auto;
+        gap: 80px;
+        div {
+            border: 4px solid $intro_btn;
+            padding: 30px 100px;
+            cursor: pointer;
+            transition: 0.4s;
+            a {
+                color: $intro_btn;
+                font-weight: bold;
+                font-size: 25px;
+            }
+        }
+        div:hover {
+            background-color: $intro_btn;
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+// end categories
+// start our-highlight-plates
+.our-highlight-plates {
+    margin-top: 200px;
+    gap: 80px;
+    & > div {
+        @include style_plate;
+    }
+}
+
+// start plate sections
+.four-cards {
+    width: 90%;
+    margin: 120px auto;
+    h2 {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+    & > div {
+        background-color: $bg_container_plates;
+        border-radius: 35px;
+        padding: 50px 20px 80px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+    }
+    h2 {
+        text-align: center;
+    }
+
+    .plate {
+        @include style_plate;
+        margin-top: 80px;
+        margin-bottom: 50px;
+    }
+}
+
+// start footer
+footer {
+    background-color: #d4f6da;
+    padding: 20px;
+    align-items: baseline;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    color: #23233c;
+}
+
+footer .logo h2 {
+    margin: 50px;
+}
+footer .logo span,
+footer p span {
+    color: $heading_girl_sec;
+}
+footer .logo h2 img {
+    width: 25px;
+}
+footer h2 {
+    margin: 50px 0px 20px 0px;
+    font-weight: bold;
+}
+
+.logo div p {
+    font-size: 22px;
+    margin-left: 0px;
+}
+footer p {
+    font-weight: bold;
+}
+
+footer li {
+    list-style: none;
+    line-height: 2.4rem;
+}
+footer li a {
+    text-decoration: none;
+    color: #43465c;
+    font-size: 17px;
+    font-weight: bold;
+}
+footer li i {
+    margin: 15px 0px 0px 20px;
+    color: $heading_girl_sec;
+    font-size: 70px;
+    cursor: pointer;
+    font-weight: bold;
+}
+footer .follow h2 {
+    margin-left: 20px;
+}
+footer div {
+    margin: 20px 0px;
+}
+
+@import "./tips";

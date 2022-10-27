@@ -1,0 +1,165 @@
+@import "./config";
+
+.girl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .image {
+        width: 500px;
+        height: 400px;
+        img {
+            width: 100%;
+        }
+    }
+    h2 {
+        color: $heading_girl_sec;
+        line-height: 1.6;
+        font-family: cursive;
+        margin: 0px;
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .arrow {
+        font-size: 40px;
+    }
+}
+.dr-tips {
+    justify-content: center;
+    align-items: center;
+    h2 {
+        font-size: 33px;
+        line-height: 1.6;
+        padding-right: 100px;
+        color: $heading_color;
+    }
+    .pic-dr {
+        width: 50%;
+        img {
+            width: 100%;
+        }
+    }
+}
+// start tips
+
+.container {
+    justify-content: center;
+    align-items: center;
+}
+.tip-intro {
+    background-color: $bg_container_plates;
+    border: 2px solid $plate_span_color;
+
+    h3 {
+        font-size: 34px;
+        padding-right: 170px;
+        width: 60%;
+    }
+    .pic {
+        width: 40%;
+        background-color: $white;
+        border-radius: 45px;
+        height: 300px;
+        padding: 30px;
+
+        img {
+            width: 100%;
+            border-radius: 45px;
+            height: 300px;
+        }
+    }
+}
+
+.all-tips {
+    margin: 80px auto;
+    h2 {
+        color: $heading_girl_sec;
+        margin: 0px;
+        margin-bottom: 40px;
+    }
+}
+.tip {
+    box-shadow: 1px 2px 6px 1px #d2d2d2;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    color: $heading_color;
+    height: 400px;
+    margin-bottom: 55px;
+    margin-top: 30px;
+    padding: 0 40px;
+
+    h3 {
+        font-weight: bold;
+        font-size: 28px;
+        width: 700px;
+    }
+    .pic {
+        width: 400px;
+        height: 400px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.tip:hover {
+    box-shadow: 1px 2px 6px 1px #a5c0bf;
+}
+
+// responsive
+
+@media (max-width: 1000px) {
+    .girl {
+        width: 90%;
+        margin: auto;
+        .image {
+            width: 80%;
+            height: auto;
+            img {
+                width: 100%;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
+    }
+    .dr-tips {
+        flex-wrap: wrap;
+        text-align: center;
+        margin: 30px auto;
+        h2 {
+            font-size: 26px;
+            margin: 20px 0;
+            padding-right: 0px;
+        }
+    }
+    .tip {
+        text-align: center;
+        gap: 10px;
+        flex-direction: column;
+        margin: 100px auto;
+
+        .pic {
+            width: 40%;
+            order: 1;
+        }
+        h3 {
+            order: 2;
+            padding: 15px 0;
+            width: auto;
+            font-size: 24px;
+        }
+    }
+}
+@media (min-width: 200px) and (max-width: 575px) {
+    .dr-tips h2 {
+        text-align: center;
+        font-size: 23px;
+        margin-bottom: 35px;
+    }
+}
